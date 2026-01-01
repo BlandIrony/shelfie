@@ -1,0 +1,32 @@
+import { NextRequest, NextResponse } from "next/server"
+
+export async function GET(req: NextRequest) {
+    const { searchParams } = new URL(req.url);
+    const subject = searchParams.get('subject');
+
+    if(!subject) {
+        return NextResponse.json(
+            { error: 'Subject is required' },
+            { status: 400 }
+        )
+    }
+
+    const safeSubject = encodeURIComponent(subject.toLowerCase())
+
+
+    try {
+        const res = await fetch(`${process.env.BASE_URL}/subjects/${safeSubject}.json?limit=100&offset=0`, {
+            headers: {
+                'Content-Type': 'application/json',
+                'User-Agent': 'Shelfie/1.0 (blandirony@gmail.com)'
+            }
+        })
+
+        const data = await res.json()
+
+        return NextResponse.json(data)
+    } catch (error) {
+        console.log(error)
+        return NextResponse.json({ error: "Failed to fetch books" }, { status: 500 })
+    }
+}

@@ -8,7 +8,7 @@ export default function SearchBar () {
                 <input
                     type="text"
                     name="search"
-                    placeholder="Title, author, genre"
+                    placeholder="Title, author, genre, or year"
                     className="inline-block flex-1 text-sh-black text-[1.25rem] border-0 outline-0 py-[.75rem]"
                 />
             </div>

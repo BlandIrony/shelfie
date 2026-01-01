@@ -16,6 +16,14 @@ html {
 }
 
 @font-face {
+    font-family: 'ClashDisplay Bold';
+    src: url('./assets/fonts/ClashDisplay-Bold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
     font-family: 'BebasNeue Regular';
     src: url('./assets/fonts/BebasNeue-Regular.ttf') format('truetype');
     font-weight: 600;
@@ -38,8 +46,11 @@ html {
     --color-sh-pink: #ffb2f0;
     --color-sh-black: #222419;
 
+    --color-accent-blue: #95bef2;
+
     /* Font */
     --font-bebas: 'BebasNeue Regular', sans-serif;
+    --font-clashDisplay: 'ClashDisplay Bold', sans-serif;
 
     /* Breakpoints */
     --breakpoint-sm: 480px;
