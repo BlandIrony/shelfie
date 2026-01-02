@@ -16,10 +16,10 @@ export default function LandingLayout({ children }: { children: React.ReactNode 
     // )
     return (
         <>
-            <div className="fixed top-0 left-0 w-full z-20 bg-sh-yellow border-2">
+            <div className="fixed top-0 left-0 w-full z-20 bg-sh-yellow border-b-4">
                 <Navbar />
             </div>
-            <main className="px-16 pt-27 w-full">
+            <main className="px-16 pt-25 w-full">
                 { children }
             </main>
         </>

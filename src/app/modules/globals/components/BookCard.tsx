@@ -26,22 +26,22 @@ export default function BookCard({
     }
   return (
     <Link
-      href={`/books/${id}`}
+      href={`/book/${id}`}
       className="inline-block transition-all duration-200 ease-in-out
                  hover:-translate-x-1 hover:-translate-y-1
-                 hover:shadow-[6px_6px_#222419]"
+                 hover:shadow-[6px_6px_#222419] rounded-[1rem]"
     >
       <figure
-        className="w-full bg-white border-2 border-sh-black"
+        className="w-full bg-white border-2 rounded-[1rem] border-sh-black"
       >
-        <div className="relative h-[24rem] w-full border-b-2 border-sh-black bg-neutral-200">
+        <div className="relative h-[24rem] w-full border-b-2 rounded-[inherit] border-sh-black bg-neutral-200">
           {coverUrl ? (
             <Image
               src={coverUrl}
               alt={`Cover of ${title}`}
               height={350}
               width={350}
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover rounded-[inherit]"
               loading="eager"
             />
           ) : (
@@ -59,7 +59,7 @@ export default function BookCard({
           <div className="mt-3 flex items-center justify-between">
               {author && (
                 <p className="text-[1.25rem] font-medium text-neutral-700">
-                  {author}
+                  {truncateText(author, 25)}
                 </p>
               )}
               {year && (
@@ -73,7 +73,7 @@ export default function BookCard({
       </figure>
       <button
         onClick={(e) => handleClick(e)}
-        className="w-full border-x-2 border-b-2 border-sh-black p-[1.5rem] bg-sh-brown text-[1.35rem] font-medium"
+        className="w-full border-x-2 border-b-2 rounded-[1rem] border-sh-black p-[1.5rem] bg-sh-brown text-[1.35rem] font-medium"
       >
         Add to Favourite
       </button>

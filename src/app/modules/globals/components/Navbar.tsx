@@ -6,7 +6,7 @@ export default function Navbar() {
         <nav className="px-[4rem] py-[.75rem] flex items-center justify-between">
             <div className="">
                 <Link href="/">
-                    <span className="font-sans font-bold uppercase tracking-tighter text-[2rem]">
+                    <span className="font-clashDisplay font-bold  text-[3.5rem]">
                         Shelfie
                     </span>
                 </Link>

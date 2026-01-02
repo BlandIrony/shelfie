@@ -3,6 +3,7 @@ import { NextRequest, NextResponse } from "next/server"
 export async function GET(req: NextRequest) {
     const { searchParams } = new URL(req.url);
     const subject = searchParams.get('subject');
+    const page = Number(searchParams.get("page")) || 1;
 
     if(!subject) {
         return NextResponse.json(
@@ -12,10 +13,12 @@ export async function GET(req: NextRequest) {
     }
 
     const safeSubject = encodeURIComponent(subject.toLowerCase())
+    const LIMIT = 20;
+    const offset = (page - 1) * LIMIT;
 
 
     try {
-        const res = await fetch(`${process.env.BASE_URL}/subjects/${safeSubject}.json?limit=100&offset=0`, {
+        const res = await fetch(`${process.env.BASE_URL}/subjects/${safeSubject}.json?limit=20&offset=${offset}`, {
             headers: {
                 'Content-Type': 'application/json',
                 'User-Agent': 'Shelfie/1.0 (blandirony@gmail.com)'

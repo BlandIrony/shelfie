@@ -45,8 +45,9 @@ html {
     --color-sh-clay: #ffcb7f;
     --color-sh-pink: #ffb2f0;
     --color-sh-black: #222419;
+    --color-sh-blue: #95bef2;
+    --color-sh-white: #ffffff;
 
-    --color-accent-blue: #95bef2;
 
     /* Font */
     --font-bebas: 'BebasNeue Regular', sans-serif;
@@ -73,7 +74,7 @@ html {
 
 body {
   background-color: var(--color-bg-primary);
-  color: var(--color-black);
+  color: var(--color-sh-black);
   font-family: var(--font-geist-mono);
 }
 
@@ -83,4 +84,13 @@ button {
 
 .font-sans {
     font-family: var(--font-geist-sans);
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
