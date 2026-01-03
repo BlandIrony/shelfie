@@ -1,8 +1,12 @@
+"use client";
 // import { SidebarProvider, SidebarTrigger } from "@/src/app/components/ui/sidebar";
 // import SidebarComponent from "../../../globals/components/SidebarComponent";
+import { useCommandK } from "@/src/app/hooks/use-comman-k";
 import Navbar from "../../../globals/components/Navbar";
+import SearchModal from "../../../globals/components/SearchModal";
 
 export default function LandingLayout({ children }: { children: React.ReactNode }) {
+    useCommandK();
     // return (
     //     <SidebarProvider
     //         defaultOpen={true}
@@ -22,6 +26,8 @@ export default function LandingLayout({ children }: { children: React.ReactNode 
             <main className="px-16 pt-25 w-full">
                 { children }
             </main>
+
+            <SearchModal />
         </>
     )
 }

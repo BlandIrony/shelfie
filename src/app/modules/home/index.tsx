@@ -114,7 +114,7 @@ export default function Home() {
                     <PaginationContent className="gap-4">
                         <PaginationItem>
                             <PaginationPrevious
-                                className="text-[1.5rem] p-[1.5rem] bg-sh-brown" href="#"
+                                className="text-[1.5rem] p-[1.5rem] bg-sh-brown rounded-[1rem]" href="#"
                                 onClick={() => canGoPrev && setPage((p) => p - 1)}
                                 aria-disabled={!canGoPrev}
                             />
@@ -128,7 +128,7 @@ export default function Home() {
                                     return (
                                         <PaginationItem key={pageNumber}>
                                             <PaginationLink
-                                                className="text-[1.5rem] p-[1.5rem] cursor-pointer"
+                                                className="text-[1.5rem] p-[1.5rem] cursor-pointer rounded-[1rem]"
                                                 isActive={page === pageNumber}
                                                 onClick={() => setPage(pageNumber)}
                                             >
@@ -148,7 +148,7 @@ export default function Home() {
                         </div> */}
                         <PaginationItem>
                             <PaginationNext
-                                className="text-[1.5rem] p-[1.5rem] bg-sh-brown" href="#"
+                                className="text-[1.5rem] p-[1.5rem] bg-sh-brown rounded-[1rem]" href="#"
                                 onClick={() => canGoNext && setPage((p) => p + 1)}
                                 aria-disabled={!canGoNext}
                             />

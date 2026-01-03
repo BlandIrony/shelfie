@@ -8,7 +8,7 @@ type CategoryStore = {
   setCategory: (cat: Category) => void;
 };
 
-const DEFAULT_CATEGORY: Category = "fantasy";
+const DEFAULT_CATEGORY: Category = "adventure";
 
 export const useCategoryStore = create<CategoryStore>()(
   persist(

@@ -1,4 +1,5 @@
 import { truncateText } from "@/src/app/lib/utils";
+import { useFavouriteStore } from "@/src/app/store/favorites-store";
 import Image from "next/image";
 import Link from "next/link";
 import { MouseEvent } from "react";
@@ -18,9 +19,19 @@ export default function BookCard({
   coverUrl,
   year
 }: BookCardProps) {
+    const { favourites, addToFavourites, removeFromFavourites } = useFavouriteStore();
+
+    const isFavourite = favourites.includes(id);
+
     const handleClick = (e: MouseEvent<HTMLButtonElement>) => {
         e.preventDefault();
-        e.stopPropagation();  
+        e.stopPropagation();
+
+        if(!isFavourite) {
+            addToFavourites(id)
+        } else {
+            removeFromFavourites(id)
+        }
 
         console.log('Clicked')
     }
@@ -75,7 +86,7 @@ export default function BookCard({
         onClick={(e) => handleClick(e)}
         className="w-full border-x-2 border-b-2 rounded-[1rem] border-sh-black p-[1.5rem] bg-sh-brown text-[1.35rem] font-medium"
       >
-        Add to Favourite
+        { !isFavourite ? 'Add to Favourites' : 'Remove from Favourites' }
       </button>
     </Link>
   );

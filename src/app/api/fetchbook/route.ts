@@ -50,6 +50,7 @@ export async function GET(req: NextRequest) {
     );
 
     const author = await authorRes.json();
+    console.log(author)
 
     const authorWorksRes = await fetch(
       `${process.env.BASE_URL}${authorKey}/works.json?limit=10`,
@@ -89,6 +90,11 @@ export async function GET(req: NextRequest) {
       author: {
         key: author.key,
         name: author.name,
+        bio: 
+          typeof author.bio === "string"
+            ? author.bio
+            : author.bio?.value ?? null
+        ,
         photos: author.photos,
         birth_date: author.birth_date ?? null,
         death_date: author.death_date ?? null,

@@ -13,9 +13,16 @@ export async function fetcher(url: string) {
   return res.json()
 }
 
-export function truncateText(text: string, maxLength: number): string {
+export function truncateText(text: string | undefined, maxLength: number): string {
   if (!text) return "";
   if (text.length <= maxLength) return text;
 
   return text.slice(0, maxLength).trimEnd() + "…";
+}
+
+export function stripLinks(text: string): string {
+  return text.replace(
+    /(https?:\/\/[^\s]+|www\.[^\s]+)/gi,
+    ""
+  ).trim();
 }
