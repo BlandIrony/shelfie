@@ -41,7 +41,7 @@ export default function BookCard({
                  hover:shadow-[6px_6px_#222419] rounded-[1rem]"
     >
       <figure
-        className="w-full bg-white border-2 rounded-[1rem] border-sh-black"
+        className="w-full bg-white border-2 rounded-[1rem] border-sh-black mb-[.85rem]"
       >
         <div className="relative h-[30rem] md:h-[24rem] w-full border-b-2 rounded-[inherit] border-sh-black bg-neutral-200">
           {coverUrl ? (
@@ -82,7 +82,7 @@ export default function BookCard({
       </figure>
       <button
         onClick={(e) => handleClick(e)}
-        className="w-full border-x-2 border-b-2 rounded-[1rem] border-sh-black p-[1.5rem] bg-sh-red text-[1.35rem] font-medium"
+        className="w-full border-x-2 border-2 rounded-[1rem] border-sh-black p-[1.5rem] bg-sh-red text-[1.35rem] font-medium"
       >
         { !isFavourite ? 'Add to Favourites' : 'Remove from Favourites' }
       </button>

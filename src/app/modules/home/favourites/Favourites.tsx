@@ -25,6 +25,8 @@ export default function Favourites() {
         staleTime: 1000 * 60 * 5,
     })
 
+    console.log(data)
+
     return (
         <section className="pt-20 min-h-screen">
             <div className="space-y-[.75rem] mb-[6rem]">
@@ -45,8 +47,17 @@ export default function Favourites() {
               />
             )}
 
+            {!isLoading && !isError && data?.length === 0 && (
+                <div className="py-24 text-center space-y-4">
+                    <h3 className="text-[2rem] font-semibold">No favourites yet</h3>
+                    <p className="text-[1.5rem] text-neutral-600">
+                    Start exploring and add books to your favourites to see them here.
+                    </p>
+                </div>
+            )}
+
             {
-                !isLoading && !isError && (
+                !isLoading && !isError && data && data.length > 0 && (
                     <div className="grid grid-cols-1 md:grid-cols-5 gap-16 md:gap-8">
                         {data?.map((book: FavouriteBook) => {
                             return (

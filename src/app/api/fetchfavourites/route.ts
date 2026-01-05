@@ -78,6 +78,8 @@ export async function GET(req: NextRequest) {
           result.status === "fulfilled"
       )
       .map((result) => result.value);
+    
+    console.log(successfulBooks)
 
     return NextResponse.json(successfulBooks);
   } catch (error) {

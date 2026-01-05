@@ -6,7 +6,7 @@ export default function LoadingGrid({ count = 10 }: { count?: number }) {
           key={i}
           className="inline-block animate-pulse rounded-[1rem] border-2 border-sh-black bg-white"
         >
-          <figure className="w-full rounded-[inherit]">
+          <figure className="w-full rounded-[inherit] mb-[.85rem]">
             <div className="h-[30rem] md:h-[24rem] w-full rounded-[1rem] border-b-2 border-sh-black bg-neutral-300" />
 
             <figcaption className="p-3">

@@ -33,7 +33,7 @@ export default function FavouriteCard({ book }: { book: FavouriteBook }) {
                         hover:shadow-[6px_6px_#222419] rounded-2xl"
             >
             <figure
-                className="w-full bg-white border-2 rounded-2xl border-sh-black"
+                className="w-full bg-white border-2 rounded-2xl border-sh-black mb-[.85rem]"
             >
                 <div className="relative h-120 md:h-96 w-full border-b-2 rounded-[inherit] border-sh-black bg-neutral-200">
                 {coverUrl ? (
