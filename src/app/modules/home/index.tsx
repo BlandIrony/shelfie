@@ -57,11 +57,11 @@ export default function Home() {
       <div className="flex flex-col space-y-[3rem] md:space-y-0 md:flex-row justify-between">
         <Categories onCategoryChange={() => setPage(1)}/>
 
-        <div>
+        {/* <div>
           <h2 className="font-clashDisplay text-[2.5rem] md:text-[3rem] mb-[2rem]">
             Filter
           </h2>
-        </div>
+        </div> */}
       </div>
 
       <div className="my-[6rem]">

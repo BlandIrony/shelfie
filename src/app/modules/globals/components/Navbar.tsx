@@ -62,7 +62,7 @@ export default function Navbar() {
                 type="button"
                 onClick={() => setIsOpen(!isOpen)}
             >
-                <span className={`inline-block font-clashDisplay text-[2.15rem] uppercase transition-color duration-400 ease-in-out ${ !isOpen ? 'text-sh-black' : 'text-sh-red' }`}>
+                <span className={`inline-block font-clashDisplay text-[2.5rem] transition-color duration-400 ease-in-out ${ !isOpen ? 'text-sh-black not-italic' : 'text-sh-red italic line-through' }`}>
                     { !isOpen ? 'Menu' : 'Close' }
                 </span>
             </button>
