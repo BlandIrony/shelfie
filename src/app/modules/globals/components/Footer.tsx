@@ -8,7 +8,7 @@ export default function Footer() {
     return (
         <footer className="px-[1rem] flex flex-col items-center space-y-[3rem] py-[2rem]">
             <div className="w-full md:w-[135rem] flex-shrink-0 flex items-center justify-center">
-                <Link href="" target="_blank" data-hover-wiggle="2" className="inline-block group overflow-hidden relative rf-shadow w-full space-y-[.5rem] md:space-y-[1.25rem] p-[3rem] md:p-[6rem] border-5 md:border-10 border-sh-black rounded-full bg-sh-red transition duration-500">
+                <Link href="https://github.com/BlandIrony" target="_blank" data-hover-wiggle="2" className="inline-block group overflow-hidden relative rf-shadow w-full space-y-[.5rem] md:space-y-[1.25rem] p-[3rem] md:p-[6rem] border-5 md:border-10 border-sh-black rounded-full bg-sh-red text-sh-white transition duration-500">
                     <span className="block text-[1rem] md:text-[2.25rem] text-center tracking-tighter">
                         Interested in seeing more stuff? Checkout my GitHub!
                     </span>

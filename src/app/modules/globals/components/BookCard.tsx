@@ -82,7 +82,7 @@ export default function BookCard({
       </figure>
       <button
         onClick={(e) => handleClick(e)}
-        className="w-full border-x-2 border-b-2 rounded-[1rem] border-sh-black p-[1.5rem] bg-sh-brown text-[1.35rem] font-medium"
+        className="w-full border-x-2 border-b-2 rounded-[1rem] border-sh-black p-[1.5rem] bg-sh-red text-[1.35rem] font-medium"
       >
         { !isFavourite ? 'Add to Favourites' : 'Remove from Favourites' }
       </button>

@@ -72,7 +72,7 @@ export default function BookDetails({ bookId }: Props) {
           <button
             type="button"
             onClick={() => handleClick()}
-            className="shrink-0 h-fit border-2 rounded-[1rem] border-sh-black p-[1.5rem] bg-sh-brown text-[1.35rem] font-medium transition-all duration-100 ease-in-out hover:translate-x-1 hover:translate-y-1 shadow-[3px_3px_#222419] hover:shadow-none"
+            className="shrink-0 h-fit border-2 rounded-[1rem] border-sh-black p-[1.5rem] bg-sh-red text-[1.35rem] font-medium transition-all duration-100 ease-in-out hover:translate-x-1 hover:translate-y-1 shadow-[3px_3px_#222419] hover:shadow-none"
             >
             { !isFavourite ? 'Add to Favourites' : 'Remove from Favourites' }
           </button>

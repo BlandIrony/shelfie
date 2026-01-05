@@ -110,7 +110,7 @@ export default function Home() {
                     <PaginationContent className="gap-4">
                         <PaginationItem>
                             <PaginationPrevious
-                                className="text-[1.5rem] p-[1.5rem] bg-sh-brown rounded-[1rem]" href="#"
+                                className="text-[1.5rem] p-[1.5rem] bg-sh-red rounded-[1rem]" href="#"
                                 onClick={() => canGoPrev && setPage((p) => p - 1)}
                                 aria-disabled={!canGoPrev}
                             />
@@ -144,7 +144,7 @@ export default function Home() {
                         </div> */}
                         <PaginationItem>
                             <PaginationNext
-                                className="text-[1.5rem] p-[1.5rem] bg-sh-brown rounded-[1rem]" href="#"
+                                className="text-[1.5rem] p-[1.5rem] bg-sh-red rounded-[1rem]" href="#"
                                 onClick={() => canGoNext && setPage((p) => p + 1)}
                                 aria-disabled={!canGoNext}
                             />
