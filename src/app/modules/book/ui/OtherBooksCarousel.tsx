@@ -41,7 +41,7 @@ export default function OtherBooksCarousel({ books }: Props) {
         {books.map((book) => (
           <OtherBookCard
             key={book.key}
-            id={book.key}
+            id={book.key ?? ""}
             title={book.title}
             coverId={book.cover_id}
           />
