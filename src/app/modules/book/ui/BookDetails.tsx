@@ -48,10 +48,22 @@ export default function BookDetails({ bookId }: Props) {
 
   return (
     <div className="relative min-h-[calc(100vh-6.35rem)] w-full">
-      <div className="pt-15 w-[54%]">
-        <div className="flex justify-between">
-          <div className="max-w-[55rem] space-y-[1.25rem] mb-[4rem]">
-            <h2 className="text-[3.5rem] font-clashDisplay">{data?.work.title}</h2>
+      <div className="py-15 w-full md:w-[54%]">
+        <div className="h-[40rem] w-full border-4 mb-[2rem] rounded-[2rem]">
+          {coverUrl && (
+            <Image
+              src={coverUrl}
+              alt={`Cover of ${data?.work?.title}`}
+              width={350}
+              height={350}
+              className="h-full w-full object-cover rounded-[inherit]"
+              loading="eager"
+            />
+          )}
+        </div>
+        <div className="flex flex-col md:flex-row md:justify-between mb-[5rem] md:mb-0">
+          <div className="w-full md:max-w-[55rem] space-y-[1.25rem] mb-[4rem]">
+            <h2 className="text-[3rem] md:text-[3.5rem] font-clashDisplay">{data?.work.title}</h2>
             <p className="font-sans font-medium tracking-tight text-[2rem]">
               By: {data?.author.name}
             </p>
@@ -67,8 +79,8 @@ export default function BookDetails({ bookId }: Props) {
         </div>
             {
                 authorImageUrl && (
-                    <div className="flex gap-14 mb-[6rem]">
-                      <div className="shrink-0 h-[25rem] w-[23rem] border-4 rounded-[2rem] -rotate-3">
+                    <div className="flex flex-col md:flex-row gap-14 mb-[6rem]">
+                      <div className="shrink-0 h-[40rem] w-full md:h-[25rem] md:w-[23rem] border-4 rounded-[2rem] md:-rotate-3">
                           <Image
                               src={authorImageUrl}
                               alt={`Cover of ${data?.author?.name}`}
@@ -105,7 +117,7 @@ export default function BookDetails({ bookId }: Props) {
         </div>
       </div>
 
-      <div className="fixed top-25 right-[4rem] w-[40%] h-[calc(100vh-6.35rem)] bg-sh-purple">
+      <div className="hidden md:block fixed top-25 right-[4rem] w-[40%] h-[calc(100vh-6.35rem)] bg-sh-purple">
         <div className="h-full w-full p-[8rem]">
           <div className="h-full w-full border-4 rotate-3 rounded-[2rem]">
             {coverUrl && (

@@ -55,26 +55,24 @@ export default function Home() {
     const canGoNext = page < totalPages;
 
   return (
-    <section className="w-full min-h-screen pt-10">
-      <div className="flex justify-between">
+    <section className="w-full min-h-screen pt-6 md:pt-10">
+      <div className="flex flex-col space-y-[3rem] md:space-y-0 md:flex-row justify-between">
         <Categories onCategoryChange={() => setPage(1)}/>
 
         <div>
-          <h2 className="font-clashDisplay text-[3rem] mb-[2rem]">
+          <h2 className="font-clashDisplay text-[2.5rem] md:text-[3rem] mb-[2rem]">
             Filter
           </h2>
         </div>
       </div>
 
       <div className="my-[6rem]">
-        <h2 className="font-clashDisplay text-[3rem] mb-[2rem]">
-          All books
+        <h2 className="font-clashDisplay text-[2.5rem] md:text-[3rem] mb-[2rem]">
+          All books on {category}
         </h2>
 
-        {/* Loading */}
         {isLoading && <LoadingGrid />}
 
-        {/* Error */}
         {isError && (
           <ErrorState
             message={(error as Error).message}
@@ -84,8 +82,8 @@ export default function Home() {
 
         {/* Data */}
         {!isLoading && !isError && (
-          <div className="space-y-[5rem]">
-              <div className="grid grid-cols-5 gap-8">
+          <div className="space-y-20">
+              <div className="grid grid-cols-1 md:grid-cols-5 gap-16 md:gap-8">
                 {data?.works.map(
                   (book: {
                     key: string;

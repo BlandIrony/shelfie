@@ -9,12 +9,12 @@ export default function Categories({ onCategoryChange }: { onCategoryChange: () 
 
     return (
         <div className="">
-            <div className="mb-[2rem]">
-                <h2 className="font-clashDisplay text-[3rem]">
+            <div className="mb-[1rem] md:mb-[2rem]">
+                <h2 className="font-clashDisplay text-[2.5rem] md:text-[3rem]">
                     Categories
                 </h2>
             </div>
-            <div className="flex gap-6 items-center">
+            <div className="flex flex-wrap md:flex-nowrap gap-6 items-center">
                 {
                     categories.map(cat => (
                         <button

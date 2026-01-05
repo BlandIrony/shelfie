@@ -45,7 +45,7 @@ export default function BookCard({
       <figure
         className="w-full bg-white border-2 rounded-[1rem] border-sh-black"
       >
-        <div className="relative h-[24rem] w-full border-b-2 rounded-[inherit] border-sh-black bg-neutral-200">
+        <div className="relative h-[30rem] md:h-[24rem] w-full border-b-2 rounded-[inherit] border-sh-black bg-neutral-200">
           {coverUrl ? (
             <Image
               src={coverUrl}

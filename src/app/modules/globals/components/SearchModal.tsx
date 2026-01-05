@@ -37,7 +37,7 @@ export default function SearchModal () {
     if(!isOpen) return null;
 
     return (
-        <div onClick={close} className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center">
+        <div onClick={close} className="fixed px-[.5rem] md:px-0 inset-0 z-50 bg-black/80 flex items-center justify-center">
             <div onClick={(e) => e.stopPropagation()} className="w-[75rem] h-[500px] bg-sh-white border-4 rounded-[2rem] overflow-hidden">
                 <div className="px-[1.25rem] py-[.5rem] bg-bg-primary border-2 rounded-[1rem] border-sh-black ">
                     <div className="w-full flex gap-4 items-center">
@@ -52,7 +52,7 @@ export default function SearchModal () {
                         />
                     </div>
                 </div>
-                <div className="p-[3rem] overflow-hidden">
+                <div className="py-[2rem] px-[.75rem] md:p-[3rem] overflow-hidden">
                     <div className="h-[40rem] w-full overflow-y-auto">
                         <SearchResults query={query}/>
                     </div>

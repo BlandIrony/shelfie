@@ -24,7 +24,7 @@ export default function SearchResults({ query }: Props) {
 
     if(isLoading || isFetching) {
         return (
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-3">
                 {Array.from({ length: 6 }).map((_, index) => (
                     <BookResultCardSkeleton key={index} />
                 ))}
@@ -37,7 +37,7 @@ export default function SearchResults({ query }: Props) {
     console.log(data)
     
     return (
-        <ul className="grid grid-cols-2 gap-6 px-3">
+        <ul className="grid grid-cols-1 md:grid-cols-2 gap-6 px-3">
             {
                 data.map((b) => (
                     <li
