@@ -1,4 +1,6 @@
-export async function searchBooks(query: string) {
+import { OpenLibrarySearchBook } from "./types/types";
+
+export async function searchBooks(query: string): Promise<OpenLibrarySearchBook[]> {
     if(!query) return [];
 
     const res = await fetch(

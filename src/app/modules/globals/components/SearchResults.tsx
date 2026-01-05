@@ -33,32 +33,26 @@ export default function SearchResults({ query }: Props) {
     }
 
     if(!data?.length) return <p className="text-[1.5rem]">No results</p>
+
+    // console.log(data)
     
     return (
         <ul className="grid grid-cols-1 md:grid-cols-2 gap-6 px-3">
             {
-                data.map((b: unknown) => {
-                    const book = b as {
-                      key: string;
-                      title: string;
-                      author_name?: string[];
-                      first_publish_year?: number;
-                      cover_id?: number | undefined;
-                    };
-                    return (
-                        <li
-                            key={book.title}
-                        >
-                            <BookResultCard
-                                id={book.key}
-                                title={book.title}
-                                author={book.author_name?.[0]}
-                                year={book.first_publish_year}
-                                coverId={book.cover_id}
-                            />
+                data.map((b) => (
+                    <li
+                        key={b.title}
+                    >
+                        <BookResultCard
+                            id={b.key}
+                            title={b.title}
+                            author={b.author_name?.[0]}
+                            year={b.first_publish_year}
+                            coverId={b.cover_i}
+                        />
                     </li>
-                )
-            })}
+                ))
+            }
         </ul>
     )
 }

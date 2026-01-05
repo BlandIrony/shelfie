@@ -17,6 +17,7 @@ export default function BookResultCard({ title, author, year, coverId, id }: Pro
     const { close } = useSearchStore();
     const path = id;
     const bookId = path.replace("/works/", "");
+    console.log(coverId)
 
     return (
             <Link
