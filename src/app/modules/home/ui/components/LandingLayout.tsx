@@ -6,6 +6,7 @@ import Navbar from "../../../globals/components/Navbar";
 import SearchModal from "../../../globals/components/SearchModal";
 import { Search } from "lucide-react";
 import { useSearchStore } from "@/src/app/store/search-store";
+import Footer from "../../../globals/components/Footer";
 
 export default function LandingLayout({ children }: { children: React.ReactNode }) {
     useCommandK();
@@ -49,6 +50,8 @@ export default function LandingLayout({ children }: { children: React.ReactNode 
             </main>
 
             <SearchModal />
+
+            <Footer /> 
         </>
     )
 }

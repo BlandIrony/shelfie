@@ -46,7 +46,7 @@ html {
     --color-sh-pink: #ffb2f0;
     --color-sh-black: #222419;
     --color-sh-blue: #95bef2;
-    --color-sh-red: #da6261;
+    --color-sh-red: #eb4545;
     --color-sh-white: #ffffff;
 
 
@@ -94,4 +94,42 @@ button {
 .scrollbar-hide {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+.rf-shadow:hover {
+  box-shadow: #222419 1.75rem 1.75rem;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0.75deg);
+  }
+  100% {
+    transform: rotate(-0.75deg);
+  }
+}
+
+@keyframes wiggle2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-1.25deg);
+  }
+}
+
+[data-wiggle='1'] {
+  animation: wiggle 0.35s steps(2, end) infinite;
+}
+
+[data-wiggle='2'] {
+  animation: wiggle 0.35s steps(2, end) infinite;
+}
+
+[data-hover-wiggle='1']:hover {
+  animation: wiggle 0.35s steps(2, end) infinite;
+}
+
+[data-hover-wiggle='2']:hover {
+  animation: wiggle2 0.35s steps(2, end) infinite;
 }
