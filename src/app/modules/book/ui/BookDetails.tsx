@@ -49,7 +49,7 @@ export default function BookDetails({ bookId }: Props) {
   return (
     <div className="relative min-h-[calc(100vh-6.35rem)] w-full">
       <div className="py-15 w-full md:w-[54%]">
-        <div className="h-[40rem] w-full border-4 mb-[2rem] rounded-[2rem]">
+        <div className="md:hidden h-[40rem] w-full border-4 mb-[2rem] rounded-[2rem]">
           {coverUrl && (
             <Image
               src={coverUrl}
