@@ -26,7 +26,7 @@ export default function Favourites() {
     })
 
     return (
-        <section className="pt-20">
+        <section className="pt-20 min-h-screen">
             <div className="space-y-[.75rem] mb-[6rem]">
                 <h2 className="font-clashDisplay text-[3rem]">
                     Favourites
