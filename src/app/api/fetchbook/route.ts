@@ -28,7 +28,6 @@ export async function GET(req: NextRequest) {
     }
 
     const work = await workRes.json();
-    console.log(work)
 
     const authorKey = work?.authors?.[0]?.author?.key;
 
@@ -50,7 +49,6 @@ export async function GET(req: NextRequest) {
     );
 
     const author = await authorRes.json();
-    console.log(author)
 
     const authorWorksRes = await fetch(
       `${process.env.BASE_URL}${authorKey}/works.json?limit=10`,

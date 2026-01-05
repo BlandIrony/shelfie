@@ -32,8 +32,6 @@ export default function BookCard({
         } else {
             removeFromFavourites(id)
         }
-
-        console.log('Clicked')
     }
   return (
     <Link

@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useFavouriteStore } from "@/src/app/store/favorites-store";
 import { FavouriteBook } from "@/src/app/lib/types/types";
 import { useQuery } from "@tanstack/react-query";

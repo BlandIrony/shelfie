@@ -15,7 +15,7 @@ export default function FavouriteCard({ book }: { book: FavouriteBook }) {
     
     const isFavourite = favourites.includes(book.id);
     
-    const handleClick = (e: MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    const handleClick = (e: MouseEvent<HTMLButtonElement>) => {
         e.preventDefault();
         e.stopPropagation();
     
@@ -24,20 +24,18 @@ export default function FavouriteCard({ book }: { book: FavouriteBook }) {
         } else {
             removeFromFavourites(book.id)
         }
-    
-        console.log('Clicked')
     }
     return (
         <Link
             href={`/book/${book.id}`}
             className="inline-block transition-all duration-200 ease-in-out
                         hover:-translate-x-1 hover:-translate-y-1
-                        hover:shadow-[6px_6px_#222419] rounded-[1rem]"
+                        hover:shadow-[6px_6px_#222419] rounded-2xl"
             >
             <figure
-                className="w-full bg-white border-2 rounded-[1rem] border-sh-black"
+                className="w-full bg-white border-2 rounded-2xl border-sh-black"
             >
-                <div className="relative h-[30rem] md:h-[24rem] w-full border-b-2 rounded-[inherit] border-sh-black bg-neutral-200">
+                <div className="relative h-120 md:h-96 w-full border-b-2 rounded-[inherit] border-sh-black bg-neutral-200">
                 {coverUrl ? (
                     <Image
                         src={coverUrl}

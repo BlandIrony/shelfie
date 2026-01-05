@@ -44,8 +44,6 @@ export default function Home() {
     retryDelay: 1000,
   });
 
-  console.log(data)
-
     const PAGE_SIZE = 20;
     const totalPages = Math.ceil(
         (data?.work_count ?? 0) / PAGE_SIZE
