@@ -25,8 +25,6 @@ export default function Favourites() {
     staleTime: 1000 * 60 * 5,
   });
 
-  console.log(data);
-
   return (
     <section className="pt-20 min-h-screen">
       <div className="space-y-[.75rem] mb-[6rem]">
