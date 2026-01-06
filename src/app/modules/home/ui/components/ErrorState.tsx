@@ -9,7 +9,7 @@ export default function ErrorState({
 }: ErrorStateProps) {
   return (
     <div className="w-full h-[50vh] flex items-center justify-center">
-      <div className="flex flex-col items-center border-2 border-sh-black bg-white p-6 max-w-md">
+      <div className="flex flex-col items-center p-6 max-w-md">
         <h3 className="text-[1.75rem] font-bold mb-2">Oops.</h3>
         <p className="text-[1.25rem] mb-4">{message}</p>
         <button
