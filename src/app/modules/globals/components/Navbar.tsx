@@ -81,12 +81,12 @@ export default function Navbar() {
                         >
                             <ul className="flex flex-col divide-y-2 divide-[#e6e6e6]">
                                 <li className="px-[1.5rem] py-[1rem] text-[1.85rem] font-medium">
-                                    <Link href="/">
+                                    <Link href="/" onClick={() => setIsOpen(false)}>
                                         Home
                                     </Link>
                                 </li>
                                 <li className="px-[1.5rem] py-[1rem] text-[1.85rem] font-medium">
-                                    <Link href="/favourites">
+                                    <Link href="/favourites" onClick={() => setIsOpen(false)}>
                                         Favourites
                                     </Link>
                                 </li>
